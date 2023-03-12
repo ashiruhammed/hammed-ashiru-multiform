@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" defer src="/js/controller.js"></script>
+  </head>
+  <body>
+    <div class="main_cont">
+      <div class="navigator">
+        <div class="index">
+          <button type="submit" form="my--form" id="1" class="number btn--1">
+            <h4>1</h4>
+          </button>
+          <div>
+            <p>STEP 1</p>
+            <h5>YOUR INFO</h5>
+          </div>
+        </div>
+        <div class="index">
+          <button id="2" class="number btn--2"><h4>2</h4></button>
+          <div>
+            <p>STEP 2</p>
+            <h5>SELECT PLAN</h5>
+          </div>
+        </div>
+        <div class="index">
+          <button id="3" class="number btn--3"><h4>3</h4></button>
+          <div>
+            <p>STEP 3</p>
+            <h5>ADDS-ON</h5>
+          </div>
+        </div>
+        <div class="index">
+          <button id="4" class="number btn--4"><h4>4</h4></button>
+          <div>
+            <p>STEP 4</p>
+            <h5>SUMMARY</h5>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <div class="forms__cont">
+            <div class="info form form--1">
+              <h1>Personal info</h1>
+              <p>Please provide your name, email address, and phone number</p>
+              <form id="my-form" action="" novalidate>
+                <div class="name">
+                  <div class="labels">
+                    <label for="name">Name</label>
+                    <p class="error"></p>
+                  </div>
+                  <input
+                    class="form_input"
+                    id="name"
+                    placeholder="e.g. Ashiru Hammed"
+                    type="text"
+                    required
+                  />
+                </div>
+                <div class="email">
+                  <div class="labels">
+                    <label for="email">Email</label>
+                    <p class="error"></p>
+                  </div>
+                  <input
+                    class="form_input"
+                    id="email"
+                    placeholder="e.g. ashiruhammed@gmail.com"
+                    type="email"
+                    required
+                  />
+                </div>
+                <div class="phoneNum">
+                  <div class="labels">
+                    <label for="phoneNum">Phone Number</label>
+                    <p class="error"></p>
+                  </div>
+                  <input
+                    class="form_input"
+                    id="phoneNum"
+                    placeholder="e.g. 0913 120 0194"
+                    type="number"
+                    required
+                
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="plans form form--2">
+              <div>
+                <h1>Select your plan</h1>
+                <p>You have the option of monthly or yearly billing.</p>
+              </div>
+              <div data-plan-picked="Arcade 9" class="plan">
+                <img src="/images/icon-arcade.svg" alt="" />
+                <div>
+                  <h3>Arcade</h3>
+                  <div class="monthly"><p>$9/mo</p></div>
+                  <div class="yearly hide">
+                    <p>$90/yr</p>
+                    <h4>2 months free</h4>
+                  </div>
+                </div>
+              </div>
+              <div data-plan-picked="Advanced 12" class="plan">
+                <img src="/images/icon-advanced.svg" alt="" />
+                <div>
+                  <h3>Advanced</h3>
+                  <div class="monthly"><p>$12/mo</p></div>
+                  <div class="yearly hide">
+                    <p>$120/yr</p>
+                    <h4>2 months free</h4>
+                  </div>
+                </div>
+              </div>
+              <div data-plan-picked="Pro 15" class="plan">
+                <img src="/images/icon-pro.svg" alt="" />
+                <div>
+                  <h3>Pro</h3>
+                  <div class="monthly"><p>$15/mo</p></div>
+                  <div class="yearly hide">
+                    <p>$150/yr</p>
+                    <h4>2 months free</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="toggler">
+                <p class="billPlan clicked_button">Monthly</p>
+                <div class="toggle_button">
+                  <div class="toggle"></div>
+                </div>
+                <p class="billPlan">Yearly</p>
+              </div>
+            </div>
+            <div class="adds form form--3">
+              <h1>Pick add-ons</h1>
+              <p>Adds-ons help enhance your gaming experience</p>
+              <div class="add" data-add-pick="Online-service 1" for="online">
+                <div>
+                  <input
+                    class="checkbox"
+                    type="checkbox"
+                    name="online"
+                    id="online"
+                  />
+                  <div>
+                    <h4>Online service</h4>
+                    <p>Access to Multiplayer games</p>
+                  </div>
+                </div>
+                <p class="monthly">+$1/mo</p>
+                <p class="yearly hide">+$10/yr</p>
+              </div>
+              <div class="add" data-add-pick="Larger-storage 2" for="storage">
+                <div>
+                  <input
+                    class="checkbox"
+                    type="checkbox"
+                    name="storage"
+                    id="storage"
+                  />
+                  <div>
+                    <h4>Larger storage</h4>
+                    <p>Access to Multiplayer games</p>
+                  </div>
+                </div>
+                <p class="monthly">+$2/mo</p>
+                <p class="yearly hide">+$20/yr</p>
+              </div>
+              <div
+                class="add"
+                data-add-pick="Customizable-profit 2"
+                for="profit"
+              >
+                <div>
+                  <input
+                    class="checkbox"
+                    type="checkbox"
+                    name="profit"
+                    id="profit"
+                  />
+                  <div>
+                    <h4>Customizabe profit</h4>
+                    <p>Access to Multiplayer games</p>
+                  </div>
+                </div>
+                <p class="monthly">+$2/mo</p>
+                <p class="yearly hide">+$20/yr</p>
+              </div>
+            </div>
+            <div class="thank--you form form--5">
+              <img src="/images/icon-thank-you.svg" alt="" />
+              <h1>Thank you!</h1>
+              <p>
+                Thanks for confirming your subscription! We hope you have fun
+                using our platform. If you ever need support, please feel free
+                to email me at hammedashiru89@gmail.com
+              </p>
+            </div>
+            <div class="finishing form form--4">
+              <h1>Fininshing up</h1>
+              <p>Double-check everything looks OK before coming</p>
+              <div class="summary">
+                <!-- <div class="summary_header">
+                  <div>
+                    <div>
+                      <h3 class="select_plan">Arcade(Monthly)</h3>
+                      <a href="#3">Change</a>
+                    </div>
+                    <p class="bill">$9/mo</p>
+                  </div>
+                  <div class="picked-add">
+                    <p>Online service</p>
+                    <p>+1/mo</p>
+                  </div> -->
+                <!-- </div> -->
+                <!-- <div class="summary_sum">
+                  <p>Total(per year)</p>
+                  <h3>$120/yr</h3>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="button__cont">
+            <!-- <button class="prev">Go Back</button> -->
+            <!-- <button class="next">Next</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
