@@ -82,7 +82,7 @@ class FormView {
       <h3>$${sum(
         ...add.map((p) => (monthly ? +p[1] : +p[1] * 10)),
         monthly ? +plan[1] : plan[1] * 10
-      )}/yr</h3>
+      )}/${monthly ? "mo" : "yr"}</h3>
       
     </div>
 `;
